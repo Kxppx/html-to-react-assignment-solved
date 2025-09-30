@@ -1,3 +1,4 @@
+import { CharacterRating } from "./_component/CharacterRating/CharacterRating";
 import "./CharacterRatings.css";
 
 export const CharacterRatings = (props) => {
@@ -14,20 +15,10 @@ export const CharacterRatings = (props) => {
           </tr>
         </thead>
         <tbody>
-          {topFive.map((item, i) => {
-            return (
-              <tr
-                className={(i + 1) % 2 === 0 ? "light" : "dark"}
-                key={item.name}
-              >
-                <td>
-                  {item.name} {item.nickName ? `"${item.nickName}"` : ""}
-                </td>
-                <td>{item.skillset.join(", ")}</td>
-                <td>{item.votes}</td>
-              </tr>
-            );
-          })}
+          {topFive.map((item, i) => (
+            <CharacterRating item={item} i={i} />
+          ))}
+          ;
         </tbody>
       </table>
     </section>
