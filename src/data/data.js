@@ -1,9 +1,4 @@
-import "./App.css";
-import { Header } from "./Components/Header/Header";
-import { CharacterRatings } from "./Components/Character-ratings/CharacterRatings";
-import { CharacterCards } from "./Components/Character-cards/CharacterCards";
-
-const mainData = [
+export const mainData = [
   {
     name: "Alex Louis Armstrong",
     nickName: "Major Armstrong",
@@ -94,14 +89,3 @@ const mainData = [
       "https://s3.amazonaws.com/comicgeeks/characters/avatars/36066.jpg?t=1668454278",
   },
 ];
-function App() {
-  return (
-    <div className="app-container">
-      <Header />
-      <CharacterRatings item={mainData} />
-      <CharacterCards item={mainData} />
-    </div>
-  );
-}
-
-export default App;
